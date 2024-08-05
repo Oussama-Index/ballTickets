@@ -1,0 +1,437 @@
+
+:root{
+    --localColor1: #FF204E ;
+    --localColor2: #A0153E ;
+    --localColor3: #00224D ;
+    --localColor4: #f4f4f4 ;
+    --localColor5: #5D0E41 ;
+}
+
+body.block-scrolling{
+    overflow: hidden;
+}
+
+/* HEADER STYLE */
+header{
+    padding: 40px 50px;
+    border-bottom: 2px solid var(--localColor3);
+    transition: 0.4s;
+    position: fixed;
+    background-color: var(--localColor4);
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+header.fixed{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+header .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .nav h1{
+    font-weight: bold;
+    font-family: var(--secondFont), cursive;
+    font-size: 40px;
+    color: var(--localColor1);
+}
+header .nav ul.links{
+    display: flex;
+
+}
+header .nav ul.links li.link{
+    list-style: none;
+    
+}
+header .nav ul.links li.link a{
+    font-family: var(--mainFont), sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid var(--localColor1);
+    margin-left: 10px;
+    border-radius: 4px;
+    color: black;
+    transition: 0.4s;
+}
+@media only screen and (max-width: 768px) {
+    header .nav ul.links li.link a{
+        padding: 5px 5px;
+        margin-left: 5px;
+    }
+
+}
+header .nav ul.links li.link a.active,
+header .nav ul.links li.link a:hover{
+    background-color: var(--localColor1);
+    color: white;
+    border: 1px solid var(--localColor2);
+}
+
+.reservedPlace{
+    width: 100%;
+}
+
+/* RESERVATIONS MENU */
+
+#overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events:fill;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-100%);
+    z-index: 9;
+    transition: 0.4s;
+}
+#overlay.active{
+    transform: none;
+
+}
+
+
+#reservations_menu{
+    z-index: 10;
+    background-color: red;
+    position: absolute;
+    background-color: var(--localColor4);
+    border: 1px solid var(--localColor3);
+    left: 50%;
+    transform: translate(-50%, -100%);
+    top: -5px;
+    text-align: center;
+    min-width: 500px;
+    transition: 0.4s;
+}
+#reservations_menu.active{
+    transform: translateX(-50%);
+    top: 50px;
+
+}
+#reservations_menu h3{
+    font-family: 'mali';
+    padding: 30px;
+    background-color: #00224D;
+    color: white;
+    position: relative;
+}
+#reservations_menu .cancel_btn,
+#reservations_menu .cancel{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--localColor2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#reservations_menu .cancel{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+#reservations_menu .reservations{
+    font-family: 'montserrat';
+    padding: 10px 20px 40px;
+}
+#reservations_menu .reservations .res{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid var(--localColor3);
+    padding: 30px 0 10px;
+    align-items: center;
+
+}
+#reservations_menu .reservations > .res div{
+}
+#reservations_menu .reservations > .res p{
+    
+}
+#reservations_menu .reservations > .res button{
+}
+
+
+/* LANDING SECTION */
+
+.landing{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../imgs/ball.jpeg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.landing img{
+    /* width: 100%; */
+}
+.landing .title{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+}
+.landing h1{
+    font-family: 'mali';
+    font-size: 64px;
+    color: var(--localColor3);
+    text-shadow: 0 0 30px var(--localColor4);
+}
+.landing .title p{
+    margin-top: 40px;
+    color: var(--localColor4);
+    font-family: 'montserrat';
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 0 0 10px black;
+}
+.trend{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 40px 40px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--localColor2), var(--localColor3));
+    opacity: 0.8;
+}
+.trend h2{
+    font-size: 30px;
+    position: relative;
+    font-family: var(--mainFont);
+    font-weight: 600;
+    width: fit-content;
+    color: var(--localColor4);
+}
+.trend h2::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: 3px;
+    background-color: var(--localColor4);
+    border-radius: 4px;
+}
+
+/* MATCHES SECTION */
+
+
+
+main{
+    background-image: url('../imgs/stadium.jpeg');
+    
+    /* min-height: 500px; */
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position:center;
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+
+.matches{
+    /* background-color: var(--localColor4); */
+    padding: 50px 40px;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    align-items: center;
+}
+
+.matches .content{
+    /* background-color: rgba(0, 34, 77, 0.3); */
+    width: fit-content;
+    padding: 20px;
+    margin: 200px 0;
+}
+.matches .content .box{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.7);
+    align-items: center;
+    width: fit-content;
+    border-bottom: 3px solid var(--localColor3);
+}
+.matches .content .box .date{
+    min-width: 100px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.matches .content .box .date span{
+    display: block;
+    text-align: center;
+    font-family: var(--mainFont);
+
+}
+.matches .content .box .date span:first-child{
+    font-size: 16px;
+    font-weight: 500;
+}
+.matches .content .box .date span:nth-child(2){
+    font-size: 24px;
+    font-weight: bold;
+}
+.matches .content .box .date span:last-child{
+    font-size: 14px;
+    font-weight: 300;
+}
+.matches .content .box .info{
+    background-color: rgba(255, 255, 255, 0.7);
+    min-width: 600px;
+    border-left: 4px solid var(--localColor3);
+    border-right: 4px solid var(--localColor3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--mainFont);
+    padding: 25px 0;
+}
+.matches .content .box .info .text{
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 5px;
+    
+}
+.matches .content .box .info p.description{
+    font-weight: 300;
+}
+.matches .content .box button.ticket-btn,
+.matches .best .box button.ticket-btn{
+    font-family: var(--mainFont);
+    font-weight: 600;
+    padding: 0 20px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--localColor2);
+    color: white;
+    font-size: 16px;
+    margin: 0 30px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.matches .content .box button.ticket-btn:hover,
+.matches .best .box button.ticket-btn:hover{
+    background-color: var(--localColor3);
+}
+.matches .best .box button.ticket-btn:hover{
+    border: 1px solid white;
+
+}
+
+@media (max-width: 1500px) {
+    .matches{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 30px 10px;
+    }
+    .matches .content{
+        margin: 40px auto;
+    }
+    .matches .best{
+        width: 60%;
+        margin: 40px auto;
+    }
+}
+@media (max-width: 1000px) {
+    .matches .content{
+        margin: 20px auto;
+    }
+    .matches .best{
+        width: 80%;
+        margin: 20px auto;
+    }
+    .matches .content .box .info{
+        min-width: 400px;
+        padding: 15px 0;
+        font-size: 14px;
+    }
+}
+
+
+/* SIDE BAR SECTION STYLE */
+
+.matches .best{
+    background-color: rgba(0, 34, 77, 0.8);
+}
+
+.matches .best h3{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: var(--mainFont);
+    text-align: center;
+    padding: 50px 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), 40%, var(--localColor2));
+    color: white;
+}
+
+.matches .best .box .date{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 2px solid var(--localColor2);
+    border-bottom: 2px solid var(--localColor2);
+    background-color: rgba(255, 255, 255, 0.7);
+    align-items: center;
+}
+.matches .best .box .date span{
+    font-weight: 500;
+    font-family: var(--mainFont);
+    font-size: 20px;
+
+}
+.matches .best .box .date span:first-child{
+}
+.matches .best .box .date span:nth-child(2){
+    font-size: 30px;
+    border: 2px solid var(--localColor3);
+    border-radius: 50%;
+    padding: 10px 12px;
+}
+.matches .best .box .date span:last-child{
+}
+.matches .best .box .info{
+    text-align: center;
+    font-family: var(--mainFont);
+}
+.matches .best .box .info .text{
+    font-weight: 700;
+    font-size: 34px;
+    font-family: var(--secondFont);
+    margin: 80px 0 50px;
+    color: white;
+}
+.matches .best .box .info p.description{
+    font-weight: 300;
+    color: white;
+
+}
+.matches .best .box button.ticket-btn{
+    display: block;
+    margin: 50px auto;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: rgb(27, 27, 27);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-family: 'montserrat';
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    pointer-events: none;
+}
+
+footer{
+    font-weight: bold;
+}
+

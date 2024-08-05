@@ -1,0 +1,156 @@
+
+:root{
+    --localColor1: #2F4F4F;
+    --localColor2: #2F4F4F;
+    --localColor3: #CCCCCC;
+}
+
+.con{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+    font-family: var(--mainFont);
+}
+
+
+.con > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1450px){
+    .con{
+        height: 90vh;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.con .title{
+    font-family: var(--secondFont);
+    font-size: 26px;
+    color: var(--localColor1);
+    flex-direction: column;
+}
+.con .title a{
+    text-decoration: none;
+    color: white;
+    background-color: var(--localColor1);
+    margin: 40px 0;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: 0.4s;
+}
+.con .title a:hover{
+    background-color: var(--localColor2);
+    color: var(--localColor3);
+}
+
+.con .box{
+    min-width: 900px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 10px var(--localColor2);
+}
+
+.con .box h2{
+    padding: 40px 0;
+    text-align: center;
+    background-color: var(--localColor2);
+    color: white;
+}
+
+.con .box form{
+    padding: 20px;
+    background-color: var(--localColor3);
+}
+
+.con .box form > div{
+    margin-top: 15px;
+}
+
+.con .box form  input{
+    padding: 20px 20px;
+    border-radius: 4px;
+    background-color: var(--localColor2);
+    color: white;
+    font: var(--mainFont);
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.con .box form input::placeholder{
+    color: white;
+    font-family: var(--mainFont);
+}
+
+.con .box form > div{
+    display: flex;
+    
+}
+.con .box form > div input{
+    flex-grow: 1;
+}
+.con .box form > div input{
+    margin-left: 15px;
+}
+
+.con .box form > div input.match{
+    font-weight: bold;
+    opacity: 0.8;
+}
+.con .box form > div input.match + div{
+    margin-left: 20px;
+}
+.con .box form > div input.match + div label{
+    font-weight: bold;
+    color: var(--localColor1);
+}
+.con .box form > div input.match + div input{
+    max-width: 100px;
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+.con .box form input[type="submit"]{
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.con .box form p{
+    text-align: center;
+    margin: 30px 0 10px;
+}
+.con .box form p a{
+    font-weight: 700;
+    color: var(--localColor1);
+}
+
+.success{
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--localColor3);
+    border: 2px solid var(--localColor1);
+    box-shadow: 0 0 5px var(--localColor1);
+}
+.success h1{
+    font-weight: 40px;
+    font-family: 'Mali';
+    border-bottom: 2px solid var(--localColor1);
+    color: var(--localColor1);
+    padding: 40px;
+}
+.success a{
+    display: block;
+    padding: 20px;
+    color: var(--localColor1);
+    font-family: 'montserrat';
+    text-align: center;
+}
+

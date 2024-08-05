@@ -1,0 +1,117 @@
+
+
+:root{
+    --localColor1: #36454F ;
+    --localColor2: #2F4F4F ;
+    --localColor3: #D3D3D3 ;
+}
+
+
+.con{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    font-family: var(--mainFont);
+}
+
+
+.con > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1450px){
+    .con{
+        grid-template-columns: 2fr;
+    }
+}
+
+.con .title{
+    font-family: var(--secondFont);
+    font-size: 26px;
+    color: var(--localColor1);
+    flex-direction: column;
+}
+.con .title h1{
+}
+.con .title a{
+    text-decoration: none;
+    color: white;
+    background-color: var(--localColor1);
+    margin: 40px 0;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: 0.4s;
+}
+.con .title a:hover{
+    background-color: var(--localColor2);
+    color: var(--localColor3);
+}
+
+.con .box{
+    min-width: 600px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 10px var(--localColor2);
+}
+
+.con .box h2{
+    padding: 40px 0;
+    text-align: center;
+    background-color: var(--localColor2);
+    color: white;
+}
+
+.con .box form{
+    padding: 20px;
+    background-color: var(--localColor3);
+}
+
+.con .box form > div{
+    margin-top: 15px;
+}
+
+.con .box form  input{
+    padding: 20px 20px;
+    border-radius: 4px;
+    background-color: var(--localColor2);
+    width: 100%;
+    color: white;
+    font: var(--mainFont);
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.con .box form input::placeholder{
+    color: white;
+    font-family: var(--mainFont);
+}
+
+.con .box form > div:first-child{
+    display: flex;
+    
+}
+.con .box form > div:first-child input{
+    flex-grow: 1;
+}
+.con .box form > div:first-child input:nth-child(2){
+    margin-left: 20px;
+}
+
+.con .box form input[type="submit"]{
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.con .box form p{
+    text-align: center;
+    margin: 30px 0 10px;
+}
+.con .box form p a{
+    font-weight: 700;
+    color: var(--localColor1);
+}
+

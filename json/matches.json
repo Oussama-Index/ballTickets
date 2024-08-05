@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "team_home": "MADRID",
+        "team_away": "BARCELONA",
+        "date": "2024-05-29",
+        "venue": "SPAIN"
+    },
+    {
+        "id": 2,
+        "team_home": "PARIS",
+        "team_away": "LIVERPOOL",
+        "date": "2024-06-09",
+        "venue": "ENGLAND"
+    },
+    {
+        "id": 3,
+        "team_home": "ARSENAL",
+        "team_away": "CITY",
+        "date": "2024-06-18",
+        "venue": "ENGLAND"
+    },
+    {
+        "id": 4,
+        "team_home": "MADRID",
+        "team_away": "CITY",
+        "date": "2024-06-28",
+        "venue": "ENGLAND"
+    },
+    {
+        "id": 5,
+        "team_home": "AL AHLI",
+        "team_away": "AL NASSR",
+        "date": "2024-07-10",
+        "venue": "SAUDI ARABIA"
+    },
+    {
+        "id": 6,
+        "team_home": "INTER MIAMI",
+        "team_away": "MILAN",
+        "date": "2024-07-14",
+        "venue": "USA"
+    },
+    {
+        "id": 7,
+        "team_home": "ARSENAL",
+        "team_away": "MADRID",
+        "date": "2024-07-19",
+        "venue": "FRANCE"
+    },
+    {
+        "id": 8,
+        "team_home": "CITY",
+        "team_away": "AL AHLI",
+        "date": "2024-07-19",
+        "venue": "ENGLAND"
+    },
+    {
+        "id": 9,
+        "team_home": "WYDAD",
+        "team_away": "RAJA",
+        "date": "2024-08-15",
+        "venue": "MAROC"
+    }
+]
